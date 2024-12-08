@@ -1,0 +1,43 @@
+body {
+    font-family: system-ui, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Style for the overlay and popup */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    height: 380px;
+    text-align: center;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #6955ee;
+    color: white;
+    bottom: 20%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background-color: #472df5;
+}

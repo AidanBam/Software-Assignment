@@ -1,0 +1,139 @@
+<!-- HTML bc i need to order CSS or smth like that -->
+
+
+<!-- Telling some not so smart people 
+and the browser "Hey this might be HTML!" -->
+<!DOCTYPE html>
+
+
+<!-- Opening HTML saying page has languages - English - 
+More if i can be rly rly bothered probs not -->
+<html lang="en">
+
+
+    <!-- In a <head> bc i can -->
+    <head>
+
+
+        <!-- Lets me display all characters correctly 
+        bc a - i can and b - what if i want non english characters -
+        but more a -->
+        <meta charset="UTF-8">
+
+
+        <!-- Linking CSS -->
+        <link rel="stylesheet" href="styles.css">
+
+
+        <!-- Names the page Study Buddy -->
+        <title>Study Buddy - Homepage</title>
+
+
+        <!-- Makes work on different devices - or so im told -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Adds a tiny icon (favicon) next to the title of the website -->
+        <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+
+
+    <!-- Ending the <head> bc - im bored of that -->
+    </head>
+
+
+    <!-- Adding a header bc it looks rly weird without it and obviously it has h1 bc its a header -->
+    <!-- Also its like a banner on the top, so like settings button ext there as well -->
+    <header>
+        <div class="title">
+            <h1>Study Buddy</h1>
+        </div>
+        <div class="settings-button-container">
+            <header class="buttons">
+                <button class="buttons_or_stuff" onclick="showOrRemoveSettings()">
+                    <img src="settings_button.png" width="30px" alt="Settings">
+                </button>
+            </header>
+        </div>
+        
+        <!-- Settings Panel -->
+        <div class="settings-panel">
+            <p>Settings content goes here...</p>
+        </div>
+        
+    </header>
+    
+
+
+
+    <!-- <div style="height: 100%; display: flex; min-height: 0px; position: relative; opacity: 1; border-radius: 6px; margin: 0px auto;" role="">
+        <div data-test-id="signup-default-modal" class="zI7 iyn Hsu" style="background-color: rgb(255, 255, 255); border-radius: 32px; position: relative; text-align: center; margin: auto; min-height: initial; box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px; width: 484px;">
+          <div class="zI7 iyn Hsu" style="min-height: 400px; padding: 20px 10px 24px;">
+            <div data-test-id="full-page-signup-close-button" class="J8R MIw QLY oy8 p6V tNl ueq zI7 iyn Hsu" style="height: 40px; width: 40px;">
+              <button aria-label="close" class="yfm adn yQo lnZ wsz" tabindex="0" type="button">
+                <div class="KuF kVc adn yQo S9z ncU BG7">
+                  <div class="x8f _O1 KS5 mQ8 uwe OGJ" style="height: 40px; width: 40px;">
+                    <svg aria-hidden="true" aria-label="" class="Uvi gUZ U9O kVc" height="18" role="img" viewBox="0 0 24 24" width="18">
+                      <path d="m15.18 12 7.16-7.16a2.25 2.25 0 1 0-3.18-3.18L12 8.82 4.84 1.66a2.25 2.25 0 1 0-3.18 3.18L8.82 12l-7.16 7.16a2.25 2.25 0 1 0 3.18 3.18L12 15.18l7.16 7.16a2.24 2.24 0 0 0 3.18 0c.88-.88.88-2.3 0-3.18z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      
+      
+
+
+    <!-- Starting the actual page you know ordering CSS to do stuff -->
+    <!-- In a body so defult text is like cool -->
+    <body>
+
+
+        <!-- Centring main content bc I can -->
+        <main>
+
+
+            <!-- For when the buttons dont want to co-operate - limiting them in this box -->
+            <section class="page-buttons-container">
+
+                <toparea_abovebuttons>
+                    <button class="page-button" onclick="loadContent('home')">Home</button>
+                    <button class="page-button" onclick="loadContent('data-transmission')">Data Transmission</button>
+                    <button class="page-button" onclick="loadContent('web-design')">Web Design</button>
+                </toparea_abovebuttons>
+
+
+            </section>
+
+
+            <!-- Content so like a overview on home, and content on each -->
+            <section class="content-area">
+
+
+
+                <div id="home"></div>
+                
+
+
+
+            </section>
+
+
+
+            
+        </main>
+
+        <script src="main.js"></script>
+
+
+
+    </body>
+
+    <!-- <footer>
+        This "Study Buddy" is not here to help you learn, if you do accidently learn or study please immediently forget it,
+    </footer> -->
+</html>

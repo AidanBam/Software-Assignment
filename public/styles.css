@@ -1,0 +1,269 @@
+/* CSS bc pretty also sections bc code pretty */
+
+
+/* Resetting Stuff */
+
+
+/* Resets all elements to have all of these -
+bc I can - and Simplicity later and also adding
+transitions to everything bc i like it and dont 
+want to do it to each one */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 3s ease;
+}
+
+
+/* Mostly Normal CSS stuff - if you can say that */
+
+
+/* Fonts for body text that look pretty - also bc i can
+dont ask why there is so many fonts */
+body {
+  font-family: system-ui, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;;
+  color: #3b3b3b;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+
+body::before {
+  font-family: system-ui, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;;
+  color: #3b3b3b;
+  line-height: 1.6;
+  z-index: 1;
+  display: none; /* Hidden by default */
+}
+
+
+/* When the settings-panel is visible, show the overlay */
+.settings-panel.active + body::before {
+  display: block;
+}
+
+
+/* Like top of screen header - idk - i used this at a point then didnt - now i dont know - im not redoing these comments */
+header {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+  border-bottom: 3px solid #f5f5f5;
+  position: fixed;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .buttons {
+  justify-content: baseline;
+  align-items: normal;
+  position:fixed;
+  display: flex;
+  border-width: 0px;
+  padding: 0px;
+  right: 20px;
+  background: transparent;
+  padding-bottom: 0px;
+  top: 38px;
+  width: 5%;
+}
+
+header .title {
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.buttons_or_stuff {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #242424;
+}
+
+
+/* Umm like help i get a bit lost here and just like decided to do this
+The name is like prefect, it like stops the buttons being in the header */
+toparea_abovebuttons {
+  padding-top: 70px;
+}
+
+
+/* Main Header that ill probably use alot bc i hate CSS and bc i can */
+h1 {
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color:  #000000;
+  text-transform: uppercase;
+}
+
+
+/* Mainly to center everything bc we all like things
+symmetrical also keeps other things away, and looks cleaner*/
+main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* The buttons on top and stuff about them - you know . to make classes*/
+
+
+.page-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.page-button {
+  background: transparent;
+  border: none;
+  padding: 18px 30px;
+  margin: 0 15px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #242424;
+  border-bottom: 3px solid transparent;
+  transition: all 2s ease;
+}
+
+.page-button:hover {
+  border-color: #333333;
+  color: #242424;
+  font-size: 26px;
+  padding: 12px 24px;
+  transition: all 3s ease;
+}
+
+.page-button:focus {
+  outline: none;
+}
+
+
+/* For content */
+
+
+.content-area {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.content-area.active {
+  display: block;
+}
+
+
+.settings-button-container {
+  background: transparent;
+  cursor: pointer;
+  color: #242424;
+  position: absolute;
+}
+
+
+.settings-panel {
+  align-self: center;
+  display: flex;
+  background-color: #fff;
+  padding: 15%;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  align-self: center;
+  z-index: 2; /* Ensures it stays above the overlay */
+  opacity: 1;
+  display: none;
+}
+
+.settings-panel.active {
+  display: block; /* Show the panel when active */
+}
+
+
+
+/* For umm js loading db content */
+a{
+  color:#000000;
+  text-transform: capitalize;
+}
+
+
+/* for like stuff */
+.lesson-card {
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.lesson-card h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.lesson-card p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Loader Styling */
+.loader {
+  font-size: 24px;
+  color: #0071e3;
+  text-align: center;
+}
+
+
+/* Like dynamic equilibrium but Dynamic CSS */
+
+
+/* Bunch of crap - bassically accounts for smaller devices -
+if the screen width is 768 pixels or less it does a bunch of things
+which i cant be bothered to explain so for simplicity and bc its what
+it bassically does it makes things smaller in CSS  also looks cool 
+i keep making it smaller and bigger just to watch it transition */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 0;
+    border-bottom: 2px solid #b0b0b0;
+  }
+
+  h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .page-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-button {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+
+}
